@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+</head>
+
+<style>
+
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .container{
+        margin: 0 auto;
+        width: 1000px;
+        height: 500px;
+    }
+
+    .menu{
+
+    }
+
+    .menu ul{
+
+        margin-top: 20px;
+        display: flex;
+        justify-content: flex-end;
+        list-style: none;
+        
+    }
+
+    .menu ul li{
+        padding: 15px 0;
+        border-top: 3px solid #3FA338;
+    }
+
+    .menu ul li a{
+        color: white;
+        background: black;
+        text-decoration: none;
+        padding: 15px 30px;
+        transition: 0.4s;
+        font-weight: 500;
+        cursor: pointer;
+    }
+
+    .menu li a:hover{
+        background: #3FA338;
+    }
+
+    .sub-menu{
+        display: none;
+    }
+
+    .menu ul li:hover .sub-menu{
+        margin-top: 14px;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        width: 200px;
+        background: gray;
+        padding: 2px;
+    }
+    
+    .menu ul li:hover .sub-menu ul{
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu ul li:hover .sub-menu ul li{
+        border: none;
+        padding: 0;
+    }
+
+    .menu ul li:hover .sub-menu ul li a{
+        display: flex;
+        margin: 2px;
+        background: transparent;
+    }
+
+    .menu ul li:hover .sub-menu ul li a:hover{
+        background: #515151;
+        display: flex;
+    }
+
+</style>
+
+<body>
+
+    <nav class="container">
+        <div class="menu">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Sobre</a></li>
+                <li>
+                    <a href="#">Produtos</a>
+                    <div class="sub-menu">
+                        <ul>
+                            <li><a href="#">Garrafas</a></li>
+                            <li><a href="#">Copos</a></li>
+                            <li><a href="#">Lancheiras</a></li>
+                        </ul>
+                    </div>
+                </li>
+                    
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+</body>
+</html>
